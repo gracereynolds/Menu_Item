@@ -16,12 +16,12 @@ public class Trio implements MenuItem {
         return sandwich.getName() + "/" + salad.getName() + "/" + drink.getName();
     }
     @Override
-    public int getPrice()
+    public double getPrice()
     {
-        int p1, p2;
-        int san = sandwich.getPrice();
-        int sal = salad.getPrice();
-        int dr = drink.getPrice();
+        double p1= 0, p2 = 0;
+        double san = sandwich.getPrice();
+        double sal = salad.getPrice();
+        double dr = drink.getPrice();
         if (san > sal && san > dr)
         {
             p1 = san;
@@ -31,16 +31,26 @@ public class Trio implements MenuItem {
             } else {
                 p2 = dr;
             }
-        }
-        if (sal > san && sal > dr)
-        {
+        } else if (sal > san && sal > dr) {
             p1 = sal;
             if (san > dr)
             {
                 p2 = san;
             }
-            else
+            else {
+                p2 = dr;
+            }
+        } else if (dr > san && dr > sal) {
+            p1 = dr;
+            if (san > sal)
+            {
+                p2 = san;
+            }
+            else {
+                p2 = sal;
+            }
         }
+        return p1 + p2;
     }
 
 }

@@ -1,9 +1,9 @@
 package com.company;
 
 public class Sandwich implements MenuItem {
-    private int price;
+    private double price;
     private String name;
-    public Sandwich(String name, int price)
+    public Sandwich(String name, double price)
     {
         this.name = name;
         this.price = price;
@@ -14,7 +14,7 @@ public class Sandwich implements MenuItem {
         return name;
     }
     @Override
-    public int getPrice()
+    public double getPrice()
     {
         return price;
     }
