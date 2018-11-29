@@ -12,7 +12,8 @@ public class Main {
         Trio trio1 = new Trio(reuben, waldorf, icedTea);
         Trio trio2 = new Trio(bec, caeser, smoothie);
         Trio trio3 = new Trio(bec, caeser, icedTea);
-        System.out.println(trio1.getName() + "Price: " + trio1.getPrice());
-        System.out.println(trio2.getName() + "Price: " + trio2.getPrice());
+        System.out.println(trio1.getName() + " Trio Price: " + trio1.getPrice());
+        System.out.println(trio2.getName() + " Trio Price: " + trio2.getPrice());
+        System.out.println(trio3.getName() + " Trio Price: " + trio3.getPrice());
     }
 }
